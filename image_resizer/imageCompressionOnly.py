@@ -8,12 +8,12 @@ def compress_images(input_dir):
 
     total_files = 0
     for filename in os.listdir(input_dir):
-        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp')):
             total_files += 1
 
     processed_count = 0
     for filename in os.listdir(input_dir):
-        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp')):
             img = Image.open(os.path.join(input_dir, filename))
             output_filename = os.path.splitext(filename)[0] + '.jpg'
             img.save(os.path.join(output_dir, output_filename), optimize=True, quality=60)
