@@ -24,8 +24,9 @@ def compress_images(input_dir):
     print("\nImages compression completed!")
     print(f"Output files are saved in {output_dir}")
 
-input_directory = input("Enter the directory path: ")
-if not os.path.exists(input_directory):
-    print(f"Directory '{input_directory}' not found. Please try again.")
-else:
-    compress_images(input_directory)
+if __name__ == "__main__":
+    input_directory = input("Enter the directory path: ")
+    if not os.path.exists(input_directory):
+        print(f"Directory '{input_directory}' not found. Please try again.")
+    else:
+        compress_images(input_directory)
